@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import http
+import http.client
 import os
 import platform
 import urllib.parse

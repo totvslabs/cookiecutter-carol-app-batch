@@ -1,0 +1,35 @@
+{
+  "batch": {
+    "processes": [
+      {
+        "algorithmDescription": {
+          "en-US": "{{cookiecutter.algorithm_description_en_US}}",
+          "pt-BR": "{{cookiecutter.algorithm_description_pt_BR}}",
+          "pt-br": "{{cookiecutter.algorithm_description_pt_BR}}"
+        },
+        "algorithmName": "{{cookiecutter.project_slug}}.py",
+        "algorithmTitle": {
+          "en-US": "{{cookiecutter.project_short_description}}"
+        },
+        "instanceProperties": {
+          "environments": {
+            "EXAMPLE_ENV_1": "value_1",
+            "EXAMPLE_ENV_2": "value_2"
+          },
+          "keepInstance": "false",
+          "luigi": {
+            "workers": "{{cookiecutter.luigi_workers}}"
+          },
+          "profile": "",
+          "properties": {
+            "dockerImage": "{{cookiecutter.batch_docker_image}}",
+            "instanceMemory": "{{cookiecutter.batch_instance_memory}}",
+            "instanceSize": "{{cookiecutter.batch_instance_disk_size}}",
+            "instanceVCPUs": "{{cookiecutter.batch_instance_vCPUs}}"
+          }
+        },
+        "name": "{{cookiecutter.project_slug}}"
+      }
+    ]
+  }
+}

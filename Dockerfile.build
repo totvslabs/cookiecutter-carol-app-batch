@@ -1,0 +1,9 @@
+# https://github.com/buildkite/agent/blob/master/packaging/docker/ubuntu-linux/Dockerfile
+FROM python:3.6
+
+# install common utilities
+
+COPY . /cookiecutter-carol-app
+WORKDIR /cookiecutter-carol-app
+
+RUN pip install -r requirements_dev.txt && make test

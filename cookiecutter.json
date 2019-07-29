@@ -1,0 +1,26 @@
+{
+    "full_name": "TotvsLabs",
+    "email": "info@totvslabs.com",
+    "github_username": "totvslabs",
+    "project_name": "Carol App Boilerplate",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "Carol App Boilerplate contains all the boilerplate you need to create a Carol App.",
+    "version": "0.1.0",
+    "carol_app_tenant": "newapp",
+    "algorithm_description_en_US": "Algorithm Description",
+    "algorithm_description_pt_BR": "Descrição do Algoritmo",
+    "luigi_workers": "4",
+    "batch_docker_image": "totvslabs/pycarol:latest",
+    "batch_instance_memory" : "2048",
+    "batch_instance_disk_size" : "20G",
+    "batch_instance_vCPUs" : "6",
+    "online_docker_image": "ai/nlp_spacy:2.6.0",
+    "online_instance_memory" : "1024",
+    "online_instance_disk_size" : "8G",
+    "online_instance_vCPUs" : "300",
+    "_copy_without_render": [
+        "*.html",
+        "*.map",
+        "*.js"
+    ]
+}

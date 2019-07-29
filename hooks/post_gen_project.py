@@ -32,5 +32,7 @@ def post_ga_data():
     connection = http.client.HTTPConnection('www.google-analytics.com')
     connection.request('POST', '/collect', params)
 
+post_ga_data()
+
 if __name__ == '__main__':
     pass

@@ -13,5 +13,10 @@
     "batch_docker_image": "totvslabs/pycarol:latest",
     "batch_instance_memory" : "2048",
     "batch_instance_disk_size" : "20G",
-    "batch_instance_vCPUs" : "6"
+    "batch_instance_vCPUs" : "6",
+    "_copy_without_render": [
+        "*.html",
+        "*.map",
+        "*.js"
+    ]
 }

@@ -18,6 +18,7 @@ def post_ga_data():
         't' : 'event',
         'ec': 'carol_cookiecuter',
         'ea': 'new_batch_project',
+        'el': 'carol_batch_app',
         'an': 'cookiecutter-carol-app-batch',
         'cd1': 'tenant',
         'cm1': '{{ cookiecutter.carol_app_tenant }}',

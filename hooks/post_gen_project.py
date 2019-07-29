@@ -2,7 +2,7 @@
 import http
 import os
 import platform
-import urllib
+import urllib.parse
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -11,7 +11,7 @@ def remove_file(filepath):
     os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
 
 def post_ga_data():
-    params = urllib.urlencode({
+    params = urllib.parse.urlencode({
         'v': 1,
         'tid': 'UA-144583662-1',
         'uid': '{{ cookiecutter.email }}',

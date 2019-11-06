@@ -22,7 +22,7 @@
           },
           "profile": "",
           "properties": {
-            "dockerImage": "{{cookiecutter.batch_docker_image}}",
+            "dockerImage": "{{cookiecutter.batch_docker_image}}:{{cookiecutter.pycarol_version}}",
             "instanceMemory": "{{cookiecutter.batch_instance_memory}}",
             "instanceSize": "{{cookiecutter.batch_instance_disk_size}}",
             "instanceVCPUs": "{{cookiecutter.batch_instance_vCPUs}}"

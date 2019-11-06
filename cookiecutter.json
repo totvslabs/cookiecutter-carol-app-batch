@@ -10,7 +10,7 @@
     "algorithm_description_en_US": "Algorithm Description",
     "algorithm_description_pt_BR": "Descrição do Algoritmo",
     "luigi_workers": "4",
-    "batch_docker_image": "totvslabs/pycarol:latest",
+    "batch_docker_image": "totvslabs/pycarol:2.24.0",
     "batch_instance_memory" : "2048",
     "batch_instance_disk_size" : "20G",
     "batch_instance_vCPUs" : "6",

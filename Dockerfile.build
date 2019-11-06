@@ -1,5 +1,4 @@
-# https://github.com/buildkite/agent/blob/master/packaging/docker/ubuntu-linux/Dockerfile
-FROM python:3.6
+FROM pyCarol:2.24.0
 
 # install common utilities
 

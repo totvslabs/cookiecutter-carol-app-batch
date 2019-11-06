@@ -28,9 +28,11 @@ def post_ga_data():
         'cd4': 'python_version',
         'cm4': platform.python_version()
     })
-
-    connection = http.client.HTTPConnection('www.google-analytics.com')
-    connection.request('POST', '/collect', params)
+    try:
+        connection = http.client.HTTPConnection('www.google-analytics.com')
+        connection.request('POST', '/collect', params)
+    except Exception as e:
+        print(e)
 
 post_ga_data()
 

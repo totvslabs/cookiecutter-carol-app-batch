@@ -1,1 +1,5 @@
+{%- if cookiecutter.pycarol_version == 'latest' %}
 pycarol
+{%- else %}
+pycarol=={{cookiecutter.pycarol_version}}
+{%- endif %}

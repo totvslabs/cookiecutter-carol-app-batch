@@ -33,7 +33,12 @@ Then:
 
 * Initialize your Git local repository
 * Create a repo and put it there.
-* Install the requirements into a virtualenv: online or batch. (``pip install -r requirements.txt``)
+* Check if your are running Python 3.6+ ``python --version``
+* Install a virtualenv by running ``make venv``
+* Activate your new Python Virtual Env: ``source .venv/bin/activate``
+* Install all development required libs using: ``make dev``
+
+Just run ``make`` to see all options you have.
 
 Submit a Pull Request
 ~~~~~~~~~~~~~~~~~~~~~~~~

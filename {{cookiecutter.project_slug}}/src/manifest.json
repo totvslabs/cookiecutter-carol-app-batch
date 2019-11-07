@@ -7,7 +7,7 @@
           "pt-BR": "{{cookiecutter.algorithm_description_pt_BR}}",
           "pt-br": "{{cookiecutter.algorithm_description_pt_BR}}"
         },
-        "algorithmName": "{{cookiecutter.project_slug}}.py",
+        "algorithmName": "{{cookiecutter.project_slug}}",
         "algorithmTitle": {
           "en-US": "{{cookiecutter.project_short_description}}"
         },

@@ -35,7 +35,7 @@ htmlcov: coverage ## Opens the current test coverage report on the default brows
 
 clean: ## Cleans all temporary and preprocessed files
 	rm -rf dist
-	find . -name "*.pyc" -exec rm -rf {} \;
+	find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
 	rm -rf htmlcov/*
 
 dev: ## Install all development packages dependencies

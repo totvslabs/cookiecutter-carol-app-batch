@@ -12,10 +12,18 @@
     "algorithm_description_pt_BR": "Descrição do Tarefa Batch",
     "luigi_workers": "4",
     "batch_docker_image": "totvslabs/pycarol",
-    "pycarol_version": "latest",
-    "batch_instance_memory" : "2048",
-    "batch_instance_disk_size" : "20G",
-    "batch_instance_vCPUs" : "6",
+    "batch_docker_image_version": "latest",
+    "carol_app_machine_types": [
+        "c1.nano",
+        "c1.micro",
+        "c1.small",
+        "c1.medium",
+        "c1.large",
+        "c1.xlarge",
+        "c1.2xlarge",
+        "g1.v100.large",
+        "g1.v100.xlarge"
+    ],
     "_copy_without_render": [
         "*.html",
         "*.map",

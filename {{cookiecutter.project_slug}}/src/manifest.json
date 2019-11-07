@@ -22,10 +22,8 @@
           },
           "profile": "",
           "properties": {
-            "dockerImage": "{{cookiecutter.batch_docker_image}}:{{cookiecutter.pycarol_version}}",
-            "instanceMemory": "{{cookiecutter.batch_instance_memory}}",
-            "instanceSize": "{{cookiecutter.batch_instance_disk_size}}",
-            "instanceVCPUs": "{{cookiecutter.batch_instance_vCPUs}}"
+            "dockerImage": "{{cookiecutter.batch_docker_image}}:{{cookiecutter.batch_docker_image_version}}",
+            "flavor": "{{cookiecutter.carol_app_machine_types}}"
           }
         },
         "name": "{{cookiecutter.project_slug}}"

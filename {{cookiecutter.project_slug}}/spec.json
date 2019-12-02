@@ -1,0 +1,17 @@
+{
+  "user": "${APP}",
+  "app": "build",
+  "cpu": 2,
+  "memory": 4000,
+  "source": {
+    "type": "git",
+    "path": "https://${GHTOKEN}@github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}",
+    "branch": "master"
+  },
+  "dockerfile": "Dockerfile",
+  "cwd": ".",
+  "cache": true,
+  "target": {
+    "image": "gcr.io/${ENVIRONMENT}/{{ cookiecutter.project_slug }}:{{cookiecutter.version}}"
+  }
+}

@@ -95,9 +95,8 @@ docs/_build/
 # PyBuilder
 target/
 
-# Cookiecutter
-output/
-carol_app_batch_boilerplate/
-
 # Virtual Env
 venv/**
+
+# Env Files
+.env

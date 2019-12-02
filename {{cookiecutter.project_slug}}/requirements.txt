@@ -1,5 +1,5 @@
-{%- if cookiecutter.batch_docker_image_version == 'latest' %}
+{%- if cookiecutter.pycarol_version == 'latest' %}
 pycarol
 {%- else %}
-pycarol=={{cookiecutter.batch_docker_image_version}}
+pycarol=={{cookiecutter.pycarol_version}}
 {%- endif %}

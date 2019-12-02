@@ -10,6 +10,9 @@ help:
 bake:
 	cookiecutter $(BAKE_OPTIONS) . --overwrite-if-exists
 
+clean:
+	rm -Rf \{{cookiecutter.project_slug}}/
+
 watch: bake
 	watchmedo shell-command -p '*.*' -c 'make bake -e BAKE_OPTIONS=$(BAKE_OPTIONS)' -W -R -D \{{cookiecutter.project_slug}}/
 

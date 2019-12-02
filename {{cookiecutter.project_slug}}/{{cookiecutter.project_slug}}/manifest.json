@@ -7,9 +7,10 @@
           "pt-BR": "{{cookiecutter.algorithm_description_pt_BR}}",
           "pt-br": "{{cookiecutter.algorithm_description_pt_BR}}"
         },
-        "algorithmName": "{{cookiecutter.project_slug}}",
+        "algorithmName": "{{cookiecutter.algorithm_name}}",
         "algorithmTitle": {
-          "en-US": "{{cookiecutter.project_short_description}}"
+          "en-US": "{{cookiecutter.algorithm_description_en_US}}",
+          "pt-BR": "{{cookiecutter.algorithm_description_pt_BR}}"
         },
         "instanceProperties": {
           "environments": {
@@ -22,7 +23,7 @@
           },
           "profile": "",
           "properties": {
-            "dockerImage": "{{cookiecutter.batch_docker_image}}:{{cookiecutter.batch_docker_image_version}}",
+            "dockerImage": "{{cookiecutter.carol_app_docker_image}}",
             "flavor": "{{cookiecutter.carol_app_machine_types}}"
           }
         },

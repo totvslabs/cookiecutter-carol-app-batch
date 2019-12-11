@@ -13,7 +13,7 @@ def remove_file(filepath):
 def post_ga_data():
     params = urllib.parse.urlencode({
         'v': 1,
-        'tid': 'UA-136298016-1',
+        'tid': 'UA-144583662-1',
         'uid': '{{ cookiecutter.email }}',
         't' : 'event',
         'ec': 'carol_cookiecuter',

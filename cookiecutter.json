@@ -2,13 +2,13 @@
     "full_name": "Totvs Labs",
     "email": "info@totvslabs.com",
     "github_username": "totvslabs",
-    "github_personal_auth_token": "<YOUR GITHUB PERONAL AUTH TOKEN>",
     "project_name": "Carol App Batch Boilerplate",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_short_description": "Carol App Batch Boilerplate contains all the boilerplate you need to create a Carol App.",
     "version": "0.1.0",
     "sonarqube": true,
-    "carol_app_tenant": "newapp",
+    "carol_app_organization": "my_organization",
+    "carol_app_environment": "my_environment",
     "algorithm_name": "{{ cookiecutter.project_slug }}_algorithm",
     "algorithm_description_en_US": "Batch task Description",
     "algorithm_description_pt_BR": "Descrição do Tarefa Batch",
@@ -26,7 +26,6 @@
         "g1.v100.large",
         "g1.v100.xlarge"
     ],
-    "carol_operator_token": "<YOUR CAROL OPERATOR TOKEN>",
     "_copy_without_render": [
         "*.html",
         "*.map",

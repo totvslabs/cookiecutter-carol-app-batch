@@ -3,11 +3,10 @@ PYLINTFLAGS = -rn
 PYTHONFILES := $(wildcard *.py)
 
 IMAGE = {{cookiecutter.carol_app_docker_image}}
-APP = {{cookiecutter.carol_app_tenant}}
+APP = {{cookiecutter.carol_app_environment}}
 OPERATOR ?= api.operator.carol.ai
 ENVIRONMENT ?= labs-ai-apps-production
 
-OPERATORTOKEN ?=
 USER ?=
 ID ?=
 GHTOKEN ?=
@@ -28,7 +27,6 @@ endif
 .PHONY: help
 
 .check-env:
-	@test $${OPERATORTOKEN?Please set environment variable OPERATORTOKEN}
 	@test $${USER?Please set environment variable USER}
 	@test $${ID?Please set environment variable ID}
 	@test $${GHTOKEN?Please set environment variable GHTOKEN}
@@ -90,18 +88,3 @@ dist: clean ## Create the dist file to deploy on Carol
 	@mkdir dist/ai-script
 	@cp {{cookiecutter.project_slug}}/manifest.json dist/ai-script
 	@cd dist && zip -r {{cookiecutter.project_slug}}.zip ai-script/*
-
-spec: .check-env ## Create the Build Spect for this Carol App
-	@APP=$(USER) IMAGE=$(IMAGE) ENVIRONMENT=$(ENVIRONMENT) envsubst < spec.json > spec.json_tmp
-
-build: spec ## Send all specs to Carol Operator to build the image
-	@curl -sXPOST -H "x-auth-token:$(OPERATORTOKEN)" \
-		"https://$(OPERATOR)/api/builds" -d@./spec.json_tmp
-
-get: .check-env ## Get the docker image status from Carol Operator
-	@curl -sXGET -H "x-auth-token:$(OPERATORTOKEN)" \
-		"https://$(OPERATOR)/api/builds/build/$(APP)/$(ID)"
-
-delete: .check-env ## Delete a Docker Image built by Carol Operator
-	@curl -sXDELETE -H "x-auth-token:$(OPERATORTOKEN)" \
-		"https://$(OPERATOR)/api/builds/build/$(APP)/$(ID)"

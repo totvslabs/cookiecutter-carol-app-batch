@@ -20,13 +20,15 @@ def post_ga_data():
         'ea': 'new_batch_project',
         'el': 'carol_batch_app',
         'cd1': 'tenant',
-        'cm1': '{{ cookiecutter.carol_app_tenant }}',
+        'cm1': '{{ cookiecutter.carol_app_environment }}',
         'cd2': 'project',
         'cm2': '{{ cookiecutter.project_name }}',
         'cd3': 'os',
         'cm3': platform.system(),
         'cd4': 'python_version',
-        'cm4': platform.python_version()
+        'cm4': platform.python_version(),
+        'cd5': 'carol_app_organization',
+        'cm5': '{{ cookiecutter.carol_app_organization }}'
     })
     try:
         connection = http.client.HTTPConnection('www.google-analytics.com')

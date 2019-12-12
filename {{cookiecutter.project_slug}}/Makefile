@@ -2,7 +2,7 @@ PYLINT = flake8
 PYLINTFLAGS = -rn
 PYTHONFILES := $(wildcard *.py)
 
-IMAGE = {{cookiecutter.carol_app_docker_image}}
+IMAGE = {{cookiecutter.project_slug}}-{{cookiecutter.algorithm_name}}
 APP = {{cookiecutter.carol_app_environment}}
 OPERATOR ?= api.operator.carol.ai
 ENVIRONMENT ?= labs-ai-apps-production

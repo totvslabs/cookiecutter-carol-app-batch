@@ -13,7 +13,7 @@
     "algorithm_description_en_US": "Batch task Description",
     "algorithm_description_pt_BR": "Descrição do Tarefa Batch",
     "luigi_workers": "4",
-    "carol_app_docker_image": "carol/{{cookiecutter.project_slug}}-{{cookiecutter.algorithm_name}}",
+    "carol_app_docker_image": "carol/{{cookiecutter.project_slug}}-{{cookiecutter.algorithm_name}}:{{cookiecutter.version}}",
     "pycarol_version": "latest",
     "carol_app_machine_types": [
         "c1.nano",

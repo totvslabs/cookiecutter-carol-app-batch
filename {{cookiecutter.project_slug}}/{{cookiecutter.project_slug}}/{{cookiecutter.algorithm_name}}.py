@@ -30,7 +30,7 @@ tasks = Tasks(carol_instance)
 task = tasks.get_task(os.environ['LONGTASKID'])
 
 def run():
-    logger.info('Running the method inside execution...')
+    logger.info('Running the method run...')
 
     task.set_progress(50)
 
@@ -42,5 +42,4 @@ def run():
 
     task.set_progress(100)
 
-if __name__ == '__main__':
-    run()
+run()

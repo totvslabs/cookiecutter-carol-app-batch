@@ -68,8 +68,11 @@ code_scan: ## Execute a Code Qualiry scan and send the data to SonarQube server
 lint: ## Lint all code for best practicies
 	flake8 ./{{cookiecutter.project_slug}} ./tests
 
+run_luigi: ## Runs the Batch process locally using a Luigi local scheduler
+	python3 -m luigi --module {{cookiecutter.project_slug}}.{{cookiecutter.algorithm_name}} main.runMe --local-scheduler
+
 run: ## Runs the Batch process locally
-	python3 -m luigi --module {{cookiecutter.project_slug}}/{{cookiecutter.algorithm_name}}.py main.runMe --local-scheduler
+	python3 -m {{cookiecutter.project_slug}}.{{cookiecutter.algorithm_name}}
 
 build_ci: ## Build CI Docker Image
 	docker build -f docker/ci_image/Dockerfile -t ci_image .

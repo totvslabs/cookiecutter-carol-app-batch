@@ -4,14 +4,12 @@ FROM totvslabs/pycarol:latest
 FROM totvslabs/pycarol:{{ cookiecutter.pycarol_version }}
 {%- endif %}
 
-env SRCFOLDER={{cookiecutter.project_slug}}
-
 WORKDIR /app
 ADD requirements.txt /app/
-ADD $SRCFOLDER/* /app/
+ADD {{cookiecutter.project_slug}}/ /app/{{cookiecutter.project_slug}}/
 
 RUN pip install -r requirements.txt
 
 VOLUME [ "/app" ]
 
-CMD ["python3", "-m", "{{cookiecutter.algorithm_name}}.py"]
+CMD ["python3", "-m", "{{cookiecutter.project_slug}}.{{cookiecutter.algorithm_name}}"]

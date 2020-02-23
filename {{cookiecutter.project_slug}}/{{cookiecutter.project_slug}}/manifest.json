@@ -4,24 +4,19 @@
       {
         "algorithmDescription": {
           "en-US": "{{cookiecutter.algorithm_description_en_US}}",
-          "pt-BR": "{{cookiecutter.algorithm_description_pt_BR}}",
-          "pt-br": "{{cookiecutter.algorithm_description_pt_BR}}"
+          "pt-BR": "{{cookiecutter.algorithm_description_pt_BR}}"
         },
         "algorithmName": "{{cookiecutter.algorithm_name}}",
         "algorithmTitle": {
           "en-US": "{{cookiecutter.algorithm_description_en_US}}",
           "pt-BR": "{{cookiecutter.algorithm_description_pt_BR}}"
         },
+        "dataModels": [
+        ],
         "instanceProperties": {
-          "environments": {
-            "EXAMPLE_ENV_1": "value_1",
-            "EXAMPLE_ENV_2": "value_2"
-          },
-          "keepInstance": "false",
           "luigi": {
             "workers": "{{cookiecutter.luigi_workers}}"
           },
-          "profile": "",
           "properties": {
             "dockerImage": "{{cookiecutter.carol_app_docker_image}}",
             "flavor": "{{cookiecutter.carol_app_machine_types}}"

@@ -14,7 +14,7 @@
     "algorithm_description_pt_BR": "Descrição do Tarefa Batch",
     "luigi_workers": "4",
     "carol_app_docker_image": "carol/{{cookiecutter.project_slug}}-{{cookiecutter.algorithm_name}}:{{cookiecutter.version}}",
-    "pycarol_version": "latest",
+    "pycarol_version": "2.30.0",
     "carol_app_machine_types": [
         "c1.nano",
         "c1.micro",

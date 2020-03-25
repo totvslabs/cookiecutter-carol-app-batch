@@ -1,5 +1,9 @@
 # https://github.com/buildkite/agent/blob/master/packaging/docker/ubuntu-linux/Dockerfile
-FROM totvslabs/pycarol
+{%-if cookiecutter.pycarol_version == 'latest' %}
+FROM totvslabs/pycarol:latest
+{%- else %}
+FROM totvslabs/pycarol:{{ cookiecutter.pycarol_version }}
+{%- endif %}
 
 ENV LANG "en_US.UTF-8"
 ENV LANGUAGE "en_US.UTF-8"

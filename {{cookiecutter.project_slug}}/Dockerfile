@@ -4,10 +4,10 @@ FROM totvslabs/pycarol:latest
 FROM totvslabs/pycarol:{{ cookiecutter.pycarol_version }}
 {%- endif %}
 
-RUN pip install -r requirements.txt
 
 WORKDIR /app
 ADD requirements.txt /app/
+RUN pip install -r requirements.txt
 ADD {{cookiecutter.project_slug}}/ /app/{{cookiecutter.project_slug}}/
 
 VOLUME [ "/app" ]
